@@ -1,0 +1,8 @@
+name: Hello # workflow name
+on: push # events (activate when pushed)
+jobs: # job definitions
+  hello: # job id
+    runs-on: ubuntu-latest # runners (run on ubuntu)
+    steps: # step definitions
+      - run: echo "Hello, world" # execute shell comannd
+      - uses: actions/checkout@v4 # call action
