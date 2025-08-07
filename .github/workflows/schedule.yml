@@ -1,0 +1,13 @@
+name: Schedule
+on:
+  schedule: # scheduled event
+    - cron: '* */12 * * *' # activate every 12 hours
+jobs:
+  run-date:
+    runs-on: ubuntu-latest
+    steps:
+      - run: date
+  run-echo:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, world"
