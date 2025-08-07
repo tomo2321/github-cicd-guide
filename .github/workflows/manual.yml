@@ -1,0 +1,14 @@
+name: Manual
+on:
+  workflow_dispatch: # manually executed event
+    inputs:
+      greeting: # input parameter name
+        type: string # data type (string)
+        default: Hello # default input parameter
+        required: true # required flag of input parameter
+        description: A cheerful word # input parameter description
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ inputs.greeting }}" # ref of input parameter "greeting"
